@@ -1,23 +1,22 @@
-# CityMatch — Currency & Cost of Living Comparator
+# CityMatch — Country & Currency Comparator
 
 **WDD 330 Final Project — Mauro Agostinelli**
 
-A web app to compare the cost of living between two cities and display real-time exchange rates.
+A web app to compare two countries side by side: real-time exchange rates, currency converter, and cost of living estimates.
 
 ## Live site
 
 > [GitHub Pages link — add after deployment]
 
-## Features (W05)
+## Features
 
-- City search with live autocomplete (Teleport API)
-- Exchange rate display (ExchangeRate-API)
-- Cost of living comparison cards
-- Quality of life scores with progress bars
-- Salary calculator
+- Country search with live autocomplete (250+ countries)
+- Real-time exchange rate display
+- Side-by-side country cards with flag, capital and currency
+- Salary equivalence calculator
 - Currency converter
 - Search history (localStorage)
-- Shareable URL
+- Shareable URL via query params
 
 ## Setup
 
@@ -26,18 +25,12 @@ npm install
 npm run dev
 ```
 
-Add your ExchangeRate-API key in `src/api.js`:
-
-```js
-export const EXCHANGE_API_KEY = 'your_key_here';
-```
-
-Get a free key at [exchangerate-api.com](https://www.exchangerate-api.com) — no credit card needed.
+No API keys required.
 
 ## APIs used
 
-- [ExchangeRate-API](https://www.exchangerate-api.com) — currency exchange rates
-- [Teleport API](https://developers.teleport.org) — city data, cost of living, quality of life
+- [CountriesNow](https://countriesnow.space) — country data: name, capital, currency, flag
+- [Open Exchange Rates](https://open.er-api.com) — real-time currency exchange rates (free tier, no key)
 
 ## Module structure
 
@@ -51,3 +44,4 @@ Get a free key at [exchangerate-api.com](https://www.exchangerate-api.com) — n
 | `src/router.js` | URL parameters for shareable links |
 | `src/styles.css` | All styles, responsive layout |
 | `index.html` | HTML structure |
+| `public/cities-data.json` | Static cost of living reference data |
